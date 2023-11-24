@@ -6,13 +6,13 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 19:18:11 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/11/24 11:00:40 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/11/24 18:50:21 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Fixed.hpp"
 
-Fixed::Fixed() entier(0)
+Fixed::Fixed() : entier(0)
 {
 	std::cout << "Default constructor called" << std::endl;
 }
@@ -23,12 +23,12 @@ Fixed::Fixed(Fixed const &copy)
     *this = copy;
 }
 
-Fixed::Fixed(const int new_int) entier(new_int << nb_bits)
+Fixed::Fixed(const int new_int): entier(new_int << nb_bits)
 {
 	std::cout << "Int constructor called" << std::endl;
 }
 
-Fixed::Fixed(const float float_nb) : entier(rounfd(float_nb * (1 << nb_bits)))
+Fixed::Fixed(const float float_nb) : entier(roundf(float_nb * (float)(1 << nb_bits)))
 {
 	std::cout << "Float constructor called" << std::endl;
 }
@@ -62,14 +62,14 @@ int     Fixed::getRawBits(void) const
 }
 
 int Fixed::toInt(void) const{
-    return(this->entier >> nb_bits);
+    return (this->entier >> nb_bits);
 }
 
 float   Fixed::toFloat(void) const{
-    return this->entier >> nb_bits;
+    return this->entier / (float)(1 << nb_bits);
 }
 
-std::ostream operator<<(std::ostream &os, Fixed:: const &objet)
+std::ostream& operator<<(std::ostream &os, Fixed const &objet)
 {
     os << objet.toFloat();
     return (os);

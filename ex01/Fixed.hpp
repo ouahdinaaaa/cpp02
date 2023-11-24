@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 19:14:06 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/11/24 11:02:50 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/11/24 18:23:55 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ class Fixed
     float toFloat(void) const;
 };
 
-std::ostream operator<<(std::ostream &os, Fixed:: const &objet);
+    std::ostream& operator<<(std::ostream &os, Fixed const &objet);
 
 
 #endif
