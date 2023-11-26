@@ -6,7 +6,7 @@
 #    By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/23 19:12:59 by ayael-ou          #+#    #+#              #
-#    Updated: 2023/11/24 02:36:42 by ayael-ou         ###   ########.fr        #
+#    Updated: 2023/11/26 16:57:10 by ayael-ou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,12 +17,11 @@ SRCS = main.cpp\
 		Fixed.cpp\
 
 OBJS = ${SRCS:.cpp=.o}
-CC = g++
+CC = c++
 RM = rm -rf
 
 %.o: %.cpp
-	${CC} -c $< -o $@
-
+	${CC} -c $< -o $@ -std=c++98 -Wall -Wextra -Werror
 ${NAME}: ${OBJS}
 	${CC} ${OBJS} -o ${NAME}
 
