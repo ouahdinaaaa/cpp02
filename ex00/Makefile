@@ -6,11 +6,11 @@
 #    By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/23 19:12:59 by ayael-ou          #+#    #+#              #
-#    Updated: 2023/11/26 16:57:15 by ayael-ou         ###   ########.fr        #
+#    Updated: 2023/11/27 14:23:07 by ayael-ou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Fixed
+NAME = canon
 
 SRC_DIR = ./
 SRCS = main.cpp\

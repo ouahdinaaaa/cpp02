@@ -6,15 +6,14 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 20:01:37 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/11/23 20:02:09 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/11/27 14:20:06 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 
-int main( void ) 
-{
+int main( void ) {
 Fixed a;
 Fixed b( a );
 Fixed c;

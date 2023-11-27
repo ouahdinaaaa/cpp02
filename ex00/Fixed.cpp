@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 19:18:11 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/11/23 20:06:42 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/11/27 14:35:47 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,18 @@
 
 Fixed::Fixed()
 {
-    std::cout << "Fixed has been created" << std::endl;
+    std::cout << JAUNE << "Default constructor called" << RESET << std::endl;
     setRawBits(0);
 }
 
 Fixed::~Fixed()
 {
-    std::cout << "Fixed has been destroyed" << std::endl;
+    std::cout << RED << "Destructor called" << RESET << std::endl;
 }
 
 Fixed::Fixed(Fixed const &copy)
 {
+    std::cout << ROSE << "Copy constructor called" << RESET << std::endl;
     *this = copy;
 }
 
@@ -32,14 +33,15 @@ Fixed   &Fixed::operator=(Fixed const &cpy)
 {
     if (this != &cpy)
     {
-        this->entier = cpy.entier;
+        std::cout << MAGENTA << "Copy assignment operator called" << RESET << std::endl;
+        this->entier = cpy.getRawBits();
     }
     return (*this);
 }
 
 int     Fixed::getRawBits(void) const
 {
-    std::cout << "getRawBits member function called" << std::endl;
+    std::cout << BLUE << "getRawBits member function called" << RESET << std::endl;
     return (this->entier);
 }
 
